@@ -2,7 +2,7 @@
 # **Начало работы**
 # Установка React приложения
 
-- `npm create vite@latest my-react-app --template react`
+- `npm create vite@latest my-react-app --template react-ts`
 - `cd my-react-app`
 - `npm install`
 - `npm run dev`
