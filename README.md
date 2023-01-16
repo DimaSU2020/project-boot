@@ -44,7 +44,7 @@
         "react/react-in-jsx-scope": "off",
         "import/prefer-default-export": "off",
         "react/prop-types": 0,
-        "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn" 
     }
