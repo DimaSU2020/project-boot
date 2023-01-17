@@ -1,0 +1,89 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 88vh;
+    padding: 0 10px;
+    border-radius: 3px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+h3 {
+    margin: 10px auto 10px 0;
+    color: black;
+}
+.reset_button {
+    height: 25px;
+    margin-bottom: 5px;
+}
+.reset_button:hover {
+    transform: scale(1.05);
+}
+.reset_button:active {
+    transform: scale(.95);
+}
+select {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    background-color: inherit;
+    border-radius: 3px;
+}
+h4 {
+    margin: 0 0 5px 0;
+    color: black;
+}
+.checkbox_label {
+    height: 20px;
+    font-size: 14px;
+    color: black;
+}
+.checkbox {
+    border: none; 
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.back_button, .forward_button {
+    border: none; 
+    outline: none;
+    width: 80px;
+    height: 27px;
+    background-color: rgb(74, 151, 254);
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.back_button:hover, .forward_button:hover {
+    transform: scale(1.05);
+}
+.back_button:active, .forward_button:active {
+    transform: scale(.95);
+}
+.back_button {
+    border-radius: 3px 0 0 3px;
+}
+.forward_button {
+    border-radius: 0 3px 3px 0;
+}
+.active {
+    background-color: rgb(32, 97, 255);
+}
+.count_pages {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.back_pages, .forward_pages {
+    list-style-type: none;
+    font-size: 12px;
+    color: black;
+}
+

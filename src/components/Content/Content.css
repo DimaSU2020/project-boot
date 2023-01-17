@@ -1,0 +1,5 @@
+.content_wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 40px 0 40px;
+}

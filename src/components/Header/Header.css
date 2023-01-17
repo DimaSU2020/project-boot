@@ -1,0 +1,32 @@
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 80px 5px 33px;
+    background-color: rgb(32, 97, 255);
+}
+.home-button {
+    width: 50px;
+    height: 30px;
+    border: none; 
+    outline: none;
+    background-color: inherit;
+    color: white;
+    cursor: pointer;
+}
+
+.login-button {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(38, 154, 53);
+    color: white;
+    border: none; 
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.home-button:hover, .login-button:hover {
+    transform: scale(1.05);
+}
+.home-button:active, .login-button:active{
+    transform: scale(0.95);
+}
