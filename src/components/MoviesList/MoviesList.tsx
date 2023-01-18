@@ -1,7 +1,9 @@
 import React from 'react'
 import { MovieCard } from '../MovieCard/MovieCard'
-import { mockMovieCard } from '../../ts/support'
+import data from '../../ts/mockMovieCard.json';
 import './MoviesList.css'
+
+const mockMovieCard = data
 
 function MoviesList() {
   return (

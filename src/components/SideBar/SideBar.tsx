@@ -1,34 +1,27 @@
-import React from 'react'
-import { checkBoxElements } from '../../ts/support'
+import data from '../../ts/mockCheckBox.json';
+import { selectSorting, selectYears } from '../../ts/support'
 import './SideBar.css'
+
+const checkBoxElements = data;
+const dataSelect = [
+  {title: 'Сортировать по:', options: selectSorting},
+  {title: 'Год релиза:', options: selectYears},
+]
 
 function SideBar () {
   return (
     <aside className='sidebar'>
       <h3>Фильтры:</h3>
       <button type='button' className='reset_button'>Сбросить все фильтры</button>
-      <h4 className='select'>Сортировать по: 
-        <select name='select' >
-          <option value="1">Популярные по убыванию</option>
-          <option value="2">Популярные по возрастанию</option>
-          <option value="3">По рейтингу по убыванию</option>
-          <option value="4">По рейтингу по возрастаию</option>
-        </select>
-      </h4>
-      <h4 className='select'>Год релиза: 
-        <select name='select' >
-          <option value="1">2020</option>
-          <option value="2">2021</option>
-          <option value="3">2022</option>
-          <option value="4">2023</option>
-        </select>
-      </h4>
-      {/* {checkBoxElements.map((element) =>
-        <label className='checkbox_label' key={String(element.id)}>
-          <input name="origin" type="checkbox" className='checkbox'/> 
-          {element.name}
-        </label>
-      )} */}
+      {dataSelect.map((item) =>
+        <h4 className='select'>{item.title} 
+          <select name='select' >
+            {item.options.map((element) =>
+              <option value={element.value}>{element.name}</option>
+            )}
+          </select>
+        </h4>
+      )}
       {checkBoxElements.map((element) =>
         <label className='checkbox_label' key={String(element.id)}>
           <input name="origin" type="checkbox" className='checkbox'/> 
@@ -43,7 +36,6 @@ function SideBar () {
         <li className='back_pages'>1 of</li>
         <li className='forward_pages'>&nbsp;1455</li>
       </ul>
-      
     </aside>
   )
 }
