@@ -1,11 +1,16 @@
 import React from 'react'
 import './MovieCard.css'
 
-function MovieCrad ({imgName, movieName, rating}) {
-  const srcAddress = `../../images/${imgName}`
+type dataMovieCard = {
+  imgURL: string,
+  movieName: string,
+  rating: string
+};
+
+function MovieCard ({imgURL, movieName, rating}: dataMovieCard) {
   return (
     <div className='wrapper_card'>
-      <img className='movie_img' src={srcAddress} alt='movie-image' />
+      <img className='movie_img' src={imgURL} alt='movie-image' />
       <div className='content_card'>
         <div className='rating'>
           Рейтинг: {rating}
@@ -25,4 +30,4 @@ function MovieCrad ({imgName, movieName, rating}) {
   )
 }
 
-export {MovieCrad}
+export {MovieCard}

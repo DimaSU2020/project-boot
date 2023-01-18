@@ -1,6 +1,5 @@
 import React from 'react'
-import { nanoid } from 'nanoid'
-import { checkBoxElements } from '../../js/support'
+import { checkBoxElements } from '../../ts/support'
 import './SideBar.css'
 
 function SideBar () {
@@ -24,10 +23,16 @@ function SideBar () {
           <option value="4">2023</option>
         </select>
       </h4>
-      {checkBoxElements.map((element: string) =>
-        <label className='checkbox_label' key={nanoid()}>
+      {/* {checkBoxElements.map((element) =>
+        <label className='checkbox_label' key={String(element.id)}>
           <input name="origin" type="checkbox" className='checkbox'/> 
-          {element}
+          {element.name}
+        </label>
+      )} */}
+      {checkBoxElements.map((element) =>
+        <label className='checkbox_label' key={String(element.id)}>
+          <input name="origin" type="checkbox" className='checkbox'/> 
+          {element.name}
         </label>
       )}
       <div className='pagination'>

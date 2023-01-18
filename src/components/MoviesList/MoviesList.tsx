@@ -1,17 +1,17 @@
 import React from 'react'
-import { MovieCrad } from '../MovieCard/MovieCrad'
-import { movieCard } from '../../js/support'
+import { MovieCard } from '../MovieCard/MovieCard'
+import { mockMovieCard } from '../../ts/support'
 import './MoviesList.css'
 
 function MoviesList() {
   return (
     <div className='wrapper_movies_card'>
-      {movieCard.map((item) => 
-        <MovieCrad 
-          key={item.id}
-          imgName={item.imgName}
-          movieName={item.movieName}
-          rating={item.rating}
+      {mockMovieCard.map((item) => 
+        <MovieCard 
+          key={String(item.id)}
+          imgURL={`https://image.tmdb.org/t/p/w500${item.poster_path || item.backdrop_path}`}
+          movieName={item.title}
+          rating={String(item.vote_average)}
         />
       )}
     </div>
