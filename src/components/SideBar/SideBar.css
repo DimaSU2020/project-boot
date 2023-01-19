@@ -58,10 +58,12 @@ h4 {
     margin-bottom: 5px;
     cursor: pointer;
 }
-.back_button:hover, .forward_button:hover {
+.back_button:hover:not(:disebaled), 
+.forward_button:hover:not(:disebaled) {
     transform: scale(1.05);
 }
-.back_button:active, .forward_button:active {
+.back_button:active:not(:disebaled), 
+.forward_button:active:not(:disebaled) {
     transform: scale(.95);
 }
 .back_button {

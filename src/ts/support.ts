@@ -7,9 +7,9 @@ const selectSorting = [
 
 const selectYears = [
   {value: "1", name: "2020"},
-  {value: "2", name: "2021"},
-  {value: "3", name: "2022"},
-  {value: "4", name: "2023"}
+  {value: "2", name: "2019"},
+  {value: "3", name: "2018"},
+  {value: "4", name: "2017"}
 ];
 
 export {selectSorting, selectYears}
