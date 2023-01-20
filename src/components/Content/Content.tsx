@@ -1,13 +1,17 @@
-import { MoviesList } from '../moviesList/MoviesList'
-import { SideBar } from '../sideBar/SideBar'
+import { useState } from 'react'
+import { List } from '../list/List'
+import { SideBar } from '../sidebar/SideBar'
 import './Content.css'
 
 function Content () {
-  const pageContext = {contentPerPage: 6, countPages: 1}
+  const [numberPage, setNumberPage] = useState(1)
+
   return (
     <div className='content_wrapper'>
-      <SideBar />
-      <MoviesList pageContext={pageContext} />
+      <SideBar 
+        setNumberPage={setNumberPage}
+      />
+      <List numberPage={numberPage} />
     </div>
   )
 }

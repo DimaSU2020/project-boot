@@ -1,5 +1,5 @@
 import React from 'react'
-import './MovieCard.css'
+import './Card.css'
 
 type dataMovieCard = {
   imgURL: string,
@@ -7,7 +7,7 @@ type dataMovieCard = {
   rating: string
 };
 
-function MovieCard ({imgURL, movieName, rating}: dataMovieCard) {
+function Card ({imgURL, movieName, rating}: dataMovieCard) {
   return (
     <div className='wrapper_card'>
       <img className='movie_img' src={imgURL} alt='movie-image' />
@@ -30,4 +30,4 @@ function MovieCard ({imgURL, movieName, rating}: dataMovieCard) {
   )
 }
 
-export {MovieCard}
+export {Card}

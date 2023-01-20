@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { selectSorting, selectYears } from '../../ts/support'
-import { dataConst } from '../../ts/mockMovieCardSome';
+import { dataConst } from '../../ts/mockMovieCard';
 import data from '../../ts/mockCheckBox.json';
 import './SideBar.css'
 
@@ -14,24 +14,25 @@ const contentFirstPage = 1
 const contentPerPage = 6
 const totalPages = Math.ceil(mockMovieCard.length / contentPerPage)
 
-function SideBar () {
+function SideBar (props: {setNumberPage: (arg0: number) => void}) {
   const [countPages, setCountPages] = useState(1)
-
   function prevPage () {
-  if(countPages === contentFirstPage) {
-      return
-  }
-  setCountPages((countPages) => countPages - 1)
-  }
+    if(countPages === contentFirstPage) {
+        return
+    }
+    setCountPages((countPages) => countPages - 1)
+    }
+  
+    function nextPage () {
+    if(countPages === totalPages) {
+        return
+    }
+    setCountPages((countPages) => countPages + 1)
+    }
+    useEffect (() => {
+      props.setNumberPage(countPages)
+    },[countPages])
 
-  function nextPage () {
-  if(countPages === totalPages) {
-      return
-  }
-  setCountPages((countPages) => countPages + 1)
-  }
-  const pageContext = {contentFirstPage, contentPerPage, totalPages, countPages}
-  // console.log(pageContext)
   return (
     <aside className='sidebar'>
       <h3>Фильтры:</h3>
